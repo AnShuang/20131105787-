@@ -24,42 +24,50 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    @IBAction func qling(sender: UIButton) {
+                resultLabe.text = ""
+    }
     @IBAction func didClicked(sender: UIButton) {
         let value = sender.currentTitle
-        if value =="+" || value =="-" || value =="*" ||value =="/" {
-            operator = value
+        if value == "+" || value == "-" || value == "*" || value == "/" {
+            operand3 = value!
             return
         }
         else if value == "=" {
             var result = 0
             switch operand3 {
                 case "+":
-                result = operand1.toInt()! + operand2.toInt()!
+                result = Int(operand1)! + Int(operand2)!
                 case "-":
-                result = operand1.toInt()! - operand2.toInt()!
+                result = Int(operand1)! - Int(operand2)!
                 case "*":
-                result = operand1.toInt()! + operand2.toInt()!
+                result = Int(operand1)! * Int(operand2)!
                 case "/":
-                result = operand1.toInt()! + operand2.toInt()!
+                result = Int(operand1)! / Int(operand2)!
             default:
                 result = 0
                 
             }
             resultLabe.text = "\(result)"
             return
-        }
+            }
         if operand3 == "" {
-            operand1 = operand1 + value
+            operand1 = operand1 + value!
             resultLabe.text = operand1
         }
         else {
-            operand2 = operand2 + value
+            operand2 = operand2 + value!
             resultLabe.text = operand2
+        }
+        if value == "c" {
+            resultLabe.text = ""
+
+        }
+        
         }
         
         
     }
 
-}
+
 
