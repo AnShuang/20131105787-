@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var operand1: String = ""
     var operand2: String = ""
     var operand3: String = ""
+    var operand4: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -51,6 +52,14 @@ class ViewController: UIViewController {
             resultLabe.text = "\(result)"
             return
             }
+        else if value == "ccc"  {
+            operand1 = ""
+            operand2 = ""
+            operand3 = ""
+            resultLabe.text = ""
+            return
+        }
+        
         if operand3 == "" {
             operand1 = operand1 + value!
             resultLabe.text = operand1
@@ -58,10 +67,6 @@ class ViewController: UIViewController {
         else {
             operand2 = operand2 + value!
             resultLabe.text = operand2
-        }
-        if value == "c" {
-            resultLabe.text = ""
-
         }
         
         }
