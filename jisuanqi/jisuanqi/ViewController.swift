@@ -16,6 +16,12 @@ class ViewController: UIViewController {
     var operand2: String = ""
     var operand3: String = ""
     var operand4: String = ""
+    var opmjia: Int = 0
+    var jia: Int = 0
+    var jian: Int = 0
+    var cheng: Int = 0
+    var chu: Int = 0
+    var isDao:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,21 +36,22 @@ class ViewController: UIViewController {
     }
     @IBAction func didClicked(sender: UIButton) {
         let value = sender.currentTitle
-        if value == "+" || value == "-" || value == "*" || value == "/" {
+        if value == "+" || value == "-" || value == "*" || value == "/" || value == "m+" {
             operand3 = value!
+            isDao = false
             return
         }
         else if value == "=" {
-            var result = 0
+            var result = 0.0
             switch operand3 {
                 case "+":
-                result = Int(operand1)! + Int(operand2)!
+                result = Double(operand1)! + Double(operand2)!
                 case "-":
-                result = Int(operand1)! - Int(operand2)!
+                result = Double(operand1)! - Double(operand2)!
                 case "*":
-                result = Int(operand1)! * Int(operand2)!
+                result = Double(operand1)! * Double(operand2)!
                 case "/":
-                result = Int(operand1)! / Int(operand2)!
+                result = Double(operand1)! / Double(operand2)!
             default:
                 result = 0
                 
@@ -57,6 +64,7 @@ class ViewController: UIViewController {
             operand2 = ""
             operand3 = ""
             resultLabe.text = ""
+            isDao = false
             return
         }
         
