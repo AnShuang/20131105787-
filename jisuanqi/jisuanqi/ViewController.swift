@@ -54,7 +54,7 @@ class ViewController: UIViewController {
                 result = Double(operand1)! / Double(operand2)!
             default:
                 result = 0
-                
+                //
             }
             resultLabe.text = "\(result)"
             return
