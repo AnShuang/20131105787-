@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     var operand3: String = ""
     var operand4: String = ""
     var opmjia: Int = 0
-    var jia: Int = 0
+    var jia: Double = 0
     var jian: Int = 0
     var cheng: Int = 0
     var chu: Int = 0
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     @IBAction func didClicked(sender: UIButton) {
         let value = sender.currentTitle
-        if value == "+" || value == "-" || value == "*" || value == "/" || value == "m+" {
+        if value == "+" || value == "-" || value == "*" || value == "/" || value == "%" {
             operand3 = value!
             isDao = false
             return
@@ -52,9 +52,10 @@ class ViewController: UIViewController {
                 result = Double(operand1)! * Double(operand2)!
                 case "/":
                 result = Double(operand1)! / Double(operand2)!
+                case "%":
+                result = Double(operand1)! % Double(operand2)!
             default:
                 result = 0
-                //
             }
             resultLabe.text = "\(result)"
             return

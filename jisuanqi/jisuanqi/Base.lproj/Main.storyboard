@@ -260,6 +260,15 @@
                                     <action selector="qling:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RWE-Zs-SuW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DIx-s7-Txs">
+                                <rect key="frame" x="38" y="397" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.53421619129999998" blue="0.71339114979999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="%"/>
+                                <connections>
+                                    <action selector="didClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cC-ag-1fh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32983022735472212" green="0.66666666666666663" blue="0.65957140861184749" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -269,7 +278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-66" y="309"/>
+            <point key="canvasLocation" x="-113" y="174"/>
         </scene>
     </scenes>
 </document>
